@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13120AD5-7D77-49D1-B187-8FF0F7506DEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsControlLibrary</RootNamespace>
+    <AssemblyName>WindowsFormsControlLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControlLibrary\CustomControlToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlToggleButton.Designer.cs">
+      <DependentUpon>CustomControlToggleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlPushButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlPushButton.Designer.cs">
+      <DependentUpon>CustomControlPushButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlCircularSignal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlCircularSignal.Designer.cs">
+      <DependentUpon>CustomControlCircularSignal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlRadioButton.Designer.cs">
+      <DependentUpon>CustomControlRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlRadialDial.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlRadialDial.Designer.cs">
+      <DependentUpon>CustomControlRadialDial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\Defs\ToggleButtonDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\PushButtonDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\CircularSignalDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\RadioButtonDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\DialDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\GuageDef.cs" />
+    <Compile Include="CustomControlLibrary\Extentions\ColorExtentions.cs" />
+    <Compile Include="CustomControlLibrary\Enumerations\LinearHorizontalOriantationTypeEnum.cs" />
+    <Compile Include="CustomControlLibrary\Enumerations\LinearVerticalOriantationTypeEnum.cs" />
+    <Compile Include="CustomControlLibrary\Enumerations\ArcOriantationTypeEnum.cs" />
+    <Compile Include="CustomControlLibrary\Extentions\RectangleExtentions.cs" />
+    <Compile Include="CustomControlLibrary\Renders\CircularSignalRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\RectangleButtonRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\CircularButtonRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\DiskRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\DimpleRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\HorizontalNeedleRenederer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\HorizontalGridLineRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Extentions\PointExtentions.cs" />
+    <Compile Include="CustomControlLibrary\Renders\RectangleBazelRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\RadialBazelRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\VerticalNeedleRenederer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\HorizontalBandRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\VerticalBandRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalBandDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalNeedleDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalRangeDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalScaleLineIntermediateDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalScaleLineMajorDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalScaleLineMinorDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearHorizontalScaleNumberDef.cs" />
+    <Compile Include="CustomControlLibrary\Renders\HorizontalRangeRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\VerticalRangeRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalBandDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalNeedleDef.cs" />
+    <Compile Include="HorizontalGuageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HorizontalGuageControl.Designer.cs">
+      <DependentUpon>HorizontalGuageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToggleButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToggleButtonControl.Designer.cs">
+      <DependentUpon>ToggleButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PushButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PushButtonControl.Designer.cs">
+      <DependentUpon>PushButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularSignalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CircularSignalControl.Designer.cs">
+      <DependentUpon>CircularSignalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadioButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadioButtonControl.Designer.cs">
+      <DependentUpon>RadioButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadialDialControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadialDialControl.Designer.cs">
+      <DependentUpon>RadialDialControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventHandlers\ControlValueChangedEventHandler.cs" />
+    <Compile Include="VerticalGuageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VerticalGuageControl.Designer.cs">
+      <DependentUpon>VerticalGuageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlArcGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlArcGauge.Designer.cs">
+      <DependentUpon>CustomControlArcGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlHorizontalGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlHorizontalGauge.Designer.cs">
+      <DependentUpon>CustomControlHorizontalGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlVerticalGauge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlVerticalGauge.Designer.cs">
+      <DependentUpon>CustomControlVerticalGauge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlLinePlotter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControlLibrary\CustomControlLinePlotter.Designer.cs">
+      <DependentUpon>CustomControlLinePlotter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControlLibrary\Defs\ArcBandDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\ArcNeedleDef.cs" />
+    <Compile Include="CustomControlLibrary\Enumerations\NeedleTypeEnum.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalScaleNumberDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalScaleLineMinorDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalScaleLineMajorDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalScaleLineIntermediateDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\LinearVerticalRangeDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\ArcRangeDef.cs" />
+    <Compile Include="CustomControlLibrary\Renders\ArcBandRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Defs\ArcScaleLineMajorDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\ArcScaleLineMinorDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\ArcScaleLineIntermediateDef.cs" />
+    <Compile Include="CustomControlLibrary\Defs\ArcScaleNumberDef.cs" />
+    <Compile Include="CustomControlLibrary\Renders\BackgroundImageRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Defs\CaptionDef.cs" />
+    <Compile Include="CustomControlLibrary\Renders\CaptionRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Extentions\FontBound.cs" />
+    <Compile Include="CustomControlLibrary\Renders\VerticalGridLineRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\ArcNeedleRenederer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\ArcRangeRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\ArcScaleLineRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\ArcScaleNumberRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\HorizontalScaleNumberRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\HorizontalScaleLineRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\VerticalScaleNumberRenderer.cs" />
+    <Compile Include="CustomControlLibrary\Renders\VerticalScaleLineRenderer.cs" />
+    <Compile Include="EnumerationExtention.cs" />
+    <Compile Include="LinePlotterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinePlotterControl.Designer.cs">
+      <DependentUpon>LinePlotterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxBitmapAttribute\ToolboxBitmapMiscAttribute.cs" />
+    <Compile Include="RadialGuageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadialGuageControl.Designer.cs">
+      <DependentUpon>RadialGuageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HorizontalGuageControl.resx">
+      <DependentUpon>HorizontalGuageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToggleButtonControl.resx">
+      <DependentUpon>ToggleButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PushButtonControl.resx">
+      <DependentUpon>PushButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularSignalControl.resx">
+      <DependentUpon>CircularSignalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioButtonControl.resx">
+      <DependentUpon>RadioButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadialDialControl.resx">
+      <DependentUpon>RadialDialControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerticalGuageControl.resx">
+      <DependentUpon>VerticalGuageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadialGuageControl.resx">
+      <DependentUpon>RadialGuageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinePlotterControl.resx">
+      <DependentUpon>LinePlotterControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomControlLibrary\Library\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToolboxBitmapAttribute\Icons\ToolboxBitmapMiscAttributeIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
